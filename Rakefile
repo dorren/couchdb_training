@@ -17,8 +17,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "couchdb_training"
   gem.homepage = "http://github.com/dorren/couchdb_training"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{couchdb training, focused on views}
+  gem.description = %Q{couchdb training focused on views}
   gem.email = "dorrenchen@gmail.com"
   gem.authors = ["Dorren Chen"]
   # dependencies defined in Gemfile
@@ -47,3 +47,5 @@ Rake::RDocTask.new do |rdoc|
   rdoc.rdoc_files.include('README*')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end
+
+Dir["#{File.dirname(__FILE__)}/tasks/**/*.rake"].each {|f| load f}
